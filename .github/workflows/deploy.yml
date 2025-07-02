@@ -11,16 +11,16 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@latest
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@latest
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Cache Node.js dependencies
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@latest
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
